@@ -1,23 +1,18 @@
-import { observer } from "mobx-react-lite";
+import { Provider as ReduxProvider } from "react-redux";
+import styled from "styled-components";
 import "./App.css";
-import { ImageCanvas } from "./components/ImageCanvas";
-import { ImageUpload } from "./components/ImageUpload";
-import imageSettingsStore from "./stores/image-settings-store";
+import { store } from "./app/store";
+import { Editor } from "./pages/editor";
 
-export const App = observer(() => {
-  const { imageUrl } = imageSettingsStore;
+const AppWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+`;
 
-  return (
-    <>
-      {imageUrl ? (
-        <ImageCanvas imageUrl={imageUrl} />
-      ) : (
-        "No image was uploaded!"
-      )}
-
-      <br />
-
-      <ImageUpload />
-    </>
-  );
-});
+export const App = () => (
+  <ReduxProvider store={store}>
+    <AppWrapper>
+      <Editor />
+    </AppWrapper>
+  </ReduxProvider>
+);

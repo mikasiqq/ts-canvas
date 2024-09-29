@@ -10,11 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "antd": "^5.16.5",
     "mobx": "^6.12.3",
     "mobx-react-lite": "^4.0.7",
+    "@ant-design/icons": "^5.3.6",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "antd": "^5.16.1",
+    "chart.js": "^4.4.4",
+    "gh-pages": "^6.1.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "styled-components": "^6.1.8",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
