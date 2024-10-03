@@ -1,4 +1,3 @@
-import { PushpinFilled } from "@ant-design/icons";
 import { Button, Tooltip } from "antd";
 import React, { MouseEventHandler, useMemo } from "react";
 import { useDispatch } from "react-redux";
@@ -46,7 +45,6 @@ export const PipetteButton: React.FC = () => {
       <Tooltip title="Получить цвет внутри холста">
         <Button
           shape="round"
-          icon={<PushpinFilled />}
           onClick={onPipetteClick}
           disabled={isCanvasEmpty}
           type={isPipetteAction ? "primary" : "dashed"}

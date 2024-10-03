@@ -252,16 +252,18 @@ export const CurveButton = () => {
               </Checkbox>
               <Button onClick={handleResetButton}>Сбросить</Button>
             </Flex>
+            <div style={{ marginTop: 20 }}>
+              <PreviewContainer>
+                {previewData && isPreviewOpen ? (
+                  <Preview drawableData={previewData} />
+                ) : (
+                  <PreviewEmpty>
+                    <span>Нажмите "Предпросмотр", чтобы увидеть результат</span>
+                  </PreviewEmpty>
+                )}
+              </PreviewContainer>
+            </div>
           </div>
-          <PreviewContainer>
-            {previewData && isPreviewOpen ? (
-              <Preview drawableData={previewData} />
-            ) : (
-              <PreviewEmpty>
-                <span>Нажмите "Предпросмотр", чтобы увидеть результат</span>
-              </PreviewEmpty>
-            )}
-          </PreviewContainer>
         </ModalContainer>
       </Modal>
     </>

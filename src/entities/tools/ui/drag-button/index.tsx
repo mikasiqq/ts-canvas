@@ -1,4 +1,3 @@
-import { DragOutlined } from "@ant-design/icons";
 import { Button, InputNumber, Tooltip } from "antd";
 import React, { useCallback, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../app/store";
@@ -55,7 +54,6 @@ export const DragButton: React.FC = () => {
       <Tooltip title="Перемещаться внутри изображения">
         <Button
           shape="round"
-          icon={<DragOutlined />}
           onClick={handleButtonClick}
           disabled={isCanvasEmpty}
           type={isDragAction ? "primary" : "dashed"}

@@ -149,16 +149,18 @@ export const FilterButton = () => {
                 <Button onClick={handleResetButton}>Reset</Button>
               </Flex>
             </Flex>
-          </div>
-          {isPreviewOpen && previewData ? (
-            <Preview drawableData={previewData} />
-          ) : (
-            <div style={{ width: 400, height: 400, paddingBottom: 20 }}>
-              <PreviewEmpty>
-                <span>Нажмите "Предпросмотр", чтобы увидеть результат</span>
-              </PreviewEmpty>
+            <div style={{ marginTop: 20 }}>
+              {isPreviewOpen && previewData ? (
+                <Preview drawableData={previewData} />
+              ) : (
+                <div style={{ width: 400, height: 400, paddingBottom: 20 }}>
+                  <PreviewEmpty>
+                    <span>Нажмите "Предпросмотр", чтобы увидеть результат</span>
+                  </PreviewEmpty>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </Flex>
       </Modal>
     </>
